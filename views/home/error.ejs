@@ -1,0 +1,76 @@
+<%- include ("../_partial/_header.ejs"); %>
+    <style>
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            background: var(--color-darkblue);
+            background-image: linear-gradient(115deg,
+                    rgba(58, 58, 158, 0.8),
+                    rgba(136, 136, 206, 0.7)),
+                url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        #rickwrecked {
+            background-color: #ddd;
+            margin: 0 auto;
+            border-radius: 25px;
+            display: block;
+            overflow: hidden;
+            text-align: center;
+            color: darkred;
+            margin-bottom: 2%;
+        }
+
+        #backButtonDiv {
+            width: 100%;
+        }
+
+        #backButton {
+            margin: 0 auto;
+            display: block;
+            overflow: hidden;
+        }
+
+        .hoverButton {
+            background-color: white;
+            color: black;
+            overflow: hidden;
+            font-weight: bolder;
+            display: block;
+            border: none;
+            font-size: x-large;
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .hoverButton:hover {
+            background-color: darkred;
+            color: white;
+        }
+    </style>
+    <br>
+    <div id="rickwrecked">
+        <h2 style="font-weight: bold;">Uh Oh! Looks like you didn't answer every question!</h2>
+        <h3 style="font-weight: bold;">Please hit the "Return To Survey" button and ensure all questions have been
+            answered.</h3>
+    </div>
+    <div id="backButtonDiv">
+        <button id="backButton" class="hoverButton" onclick="history.back()">Return To Survey</button>
+    </div>
+    <div>
+        <div style="padding-top: 2%;">
+            <iframe style="border: 2px black;" width="1150" height="630"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1">
+            </iframe>
+        </div>
+    </div>
+    <%- include ("../_partial/_footer.ejs"); %>

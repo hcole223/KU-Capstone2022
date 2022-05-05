@@ -1,0 +1,107 @@
+<%- include ("../_partial/_header.ejs"); %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#animatedBackground {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("https://ku.edu/images/jpgs/study-abroad-large-crop.jpg");
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: auto 100%;
+  animation: animatedBackground 500s linear infinite;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 0;
+  }
+}
+        hr.rounded {
+            border-top: 4px solid darkred;
+            border-radius: 1px;
+            width: 100%;
+        }
+
+        #courseSearchButton {
+            float: left;
+            margin-top: 1%;
+            margin-left: 21%;
+        }
+
+        #degreeSearchButton {
+            float: right;
+            margin-right: 21%;
+        }
+
+        #coursePic {
+            width: 32%;
+            float: right;
+            margin-top: 3%;
+            margin-right: 5%;
+            margin-bottom: 1.5%;
+        }
+
+        #degreePic {
+            width: 32%;
+            float: left;
+            margin-left: 4%;
+        }
+        #degreeTitle {
+            padding-left: 43%;
+            padding-top: 7%;
+            padding-bottom: .8%;
+            font-weight: bold; 
+            color: darkred;
+            font-family: georgia;
+        }
+
+        #courseTitle {
+            padding-top: 9%;
+            padding-left: 13%;
+            font-weight: bold; color: darkred;
+            font-family: georgia;
+        }
+
+        .buttons {
+            background-color: white;
+            border: 4px solid dodgerblue;
+            color: dodgerblue;
+            font-weight: bold;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 25%;
+        }
+    </style>
+        <div id="animatedBackground" style="overflow: hidden;">
+        <div>
+            <div>
+                <img src="browse_courses.jpg" id="coursePic">
+                <h1 id="courseTitle">Explore the 5,000+ courses offered at KU</h1>
+                <a href="/courseSearch" class="buttons" id="courseSearchButton">Search Courses</a>
+            </div>
+            <hr class="rounded">
+            <div>
+                <img src="browse_degrees.jpg" id="degreePic">
+                <h1 id="degreeTitle">Explore the 250+ Undergraduate offerings at KU</h1>
+                <a href="/degreeSearch" class="buttons" id="degreeSearchButton">Search Degrees & Certificates</a>
+            </div>
+        </div>
+    </div>
+    <%- include ("../_partial/_footer.ejs"); %>

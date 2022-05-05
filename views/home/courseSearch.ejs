@@ -1,0 +1,60 @@
+<%- include ("../_partial/_header.ejs"); %>
+<div id="container">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    #searchParam {
+      padding-left: 20%;
+      font-size: x-large;
+    }
+    #courseSearch {
+      margin-right: 3%;
+      font-size: large;
+    }
+    html, body {
+      height: 100%;
+      background-color: #d9d9d9;
+      background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
+      background-repeat:no-repeat;
+      background-attachment: fixed;
+    }
+    #title {
+      font-weight: bold; 
+      color: darkred;
+    }
+    #searchButton {
+      background-color: rgb(0, 81, 186);
+      color: white;
+    }
+  </style>
+  <div id="courseCont">
+    <source>
+    <h1 id="title">KU Course Search: </h1>
+    <br >
+    <br >
+    <body>
+    <form method="post" action="/courseSearchQuery">
+        <span id="searchParam" for="courseSearchParam">Search for class by: </span>
+        <select name="courseSearchParam[]" id="courseSearch">
+          <option value="COURSE_CODE">Course Code</option>
+          <option value="COURSE_NAME">Course Name</option>
+          <option value="COURSE_DESCRIPTION">Course Description</option>
+          <option value="All">Keyword (All)</option>
+        </select>
+        <input id="searchInput" type="text" name="courseSearchQuery[]" placeholder="Search" pattern="^[a-zA-Z0-9 ]+" oninvalid="setCustomValidity('Alphanumeric characters only! (╯°□°)╯︵ ┻━┻')">
+        <input type="submit" value="Search" id="searchButton">
+        </form>
+    </body>
+    <br >
+    <br >
+    <% if(locals.returnResult) { %>
+        <% for (var i=0; i < returnResult.length; i++ ) { %>
+            <br>  
+            <h4 style="font-weight: bold;"><%= returnResult[i][0] %> </h4>
+            <h4 style="font-size: medium;"><%= returnResult[i][1] %> </h4>
+            <h4 style="font-size: medium;">Prerequisites: <%= returnResult[i][2] %> </h4>
+            <br>
+        <% } %>
+    <% } %>
+    <br>
+</div>
+<%- include ("../_partial/_footer.ejs"); %>

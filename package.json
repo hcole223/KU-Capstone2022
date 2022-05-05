@@ -1,0 +1,24 @@
+{
+  "name": "jayseeker",
+  "version": "1.0.1",
+  "description": "JaySeeker application written for ITEC490",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "author": "Hunter, Matthew, Dung, Farshad, Justin",
+  "license": "KU",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "mongoose": "^6.0.10",
+    "natural": "^5.1.13",
+    "oracledb": "^5.2.0",
+    "path": "^0.12.7",
+    "wordnet-db": "^3.1.14"
+  }
+}

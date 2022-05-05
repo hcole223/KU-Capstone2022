@@ -1,0 +1,55 @@
+<%- include ("../_partial/_header.ejs"); %>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <style>
+    body,
+    h1 {
+      font-family: "Raleway", sans-serif
+    }
+
+    .button {
+      background-color: white;
+      border: 4px solid dodgerblue;
+      color: dodgerblue;
+      font-weight: bold;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    #campusDrone {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+    }
+  </style>
+
+  <div style="width: 100%;">
+    <video autoplay muted loop id="campusDrone">
+      <source src="Edwards-BackgroundV2.mp4" type="video/mp4">
+    </video>
+
+    <body>
+      <div>
+        <div class="w3-display-middle"
+          style="background-color: ghostwhite; border-top: 6px solid dodgerblue; width: 50%;">
+          <h1 class="w3-jumbo w3-animate-top"
+            style="font-weight: bold; padding-top: 2%; padding-left: 2%; color: darkred;">JaySeeker</h1>
+          <h1 class="w3-xxlarge w3-animate-top"
+            style="text-align: center; font-weight: bold; padding: 2%; color: dodgerblue;">Your Perfect Degree is a
+            Few Questions Away</h1>
+          <div style="padding-top: 1%; padding-bottom: 2%; margin-left: 40%;">
+            <a href="/survey" class="button">Start Survey</a>
+          </div>
+        </div>
+      </div>
+    </body>
+    <%- include ("../_partial/_footer.ejs"); %>
